@@ -1,0 +1,16 @@
+@startuml
+abstract class EmpleadoC{
+    -RFC: String
+    -apellidos:String
+    -nombres:String
+    +EmpleadoC(RFC:String, apellidos:String, nombres:String)
+    
+}
+
+class EmpleadoVendedorC extends EmpleadoC{}
+class EmpleadoPermanenteC extends EmpleadoC{}
+
+EmpleadoC<|- EmpleadoVendedorC
+EmpleadoC<|- EmpleadoPermanenteC
+
+@enduml
